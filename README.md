@@ -64,3 +64,10 @@ docker-compose down
 
 Your modifications will be persisted in the `dabata/` local folder, and can be retrieved
 once you restart `docker compose up`.
+
+
+#### Dumping the data
+```bash
+docker exec -it <container-name> bash
+pg_dump postgres://northwind_user:thewindisblowing@postgres/northwind > /pgbackup/northwind.sql
+```
